@@ -1,8 +1,8 @@
 # cards_basic
-Starting point for other cards projects. I'm use JavaScript and native HTML5 (Drag &amp; Drop)
+Starting point for other cards projects. I used JavaScript (without JQuery) to build app logic and native HTML5 API (Drag &amp; Drop)
 
 It's simple game something like "pasjans", but we have to collect points by hitting the same cards. 
-I used native JavaScript (without JQuery) to build app logic.
+
 
 LIVE DEMO:
 http://patryk-nizio.pl/example/card_basic/
