@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Kill Cards</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>    
+    <div class="container">
+    <div id="info_modal_btn" class="info_modal">
+        <div id="nav_icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div> 
+        <h1>Cards  -  Drag, drop & Kill 'Em All </h1>
+        <div id="score_box" class="info_score"> Score: 0 </div>    
+
+        <div class="drop_box" >
+            <div id="cards_box_one" class="cards_box" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div id="cards_info_one" class="cards_info">Out_1</div>
+                <div id="cards_add_one" class="cards_operation">+</div>
+                <div id="cards_delete_one" class="cards_operation">-</div>
+                <!-- CARDS -->
+            </div>
+
+            <div id="cards_box_two" class="cards_box" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div id="cards_info_two" class="cards_info">Out_2</div>
+                <div id="cards_add_two" class="cards_operation">+</div>
+                <!--<div id="cards_delete_two" class="cards_operation">-</div>-->
+                <!-- CARDS -->
+            </div> 
+        </div>
+    </div>
+    <div id="modal_rules_window" class="container modal">
+        <div  class="modal_rules">
+            <h3>O grze</h3>
+                <h4>Cel gry</h4>
+                    <p> Zdobądz jak najwięcej punktów zderzając z sobą te same figury. Możesz kumulować punkty nakładając na siebie w kolejnosci malejącej (jak w pasjansie) karty tego samego koloru (♣,♠,♦,♥) </p>               
+                <h4>Opis</h4>
+                    <p>Jest to gra pokazująca możliwości API Drag & Drop z HTML5. Aplikacja ta jest punktem wyjscia do stworzenia innych gier karcianych. Obecnie pisze logike pozwalajacą na gre w pasjansa i pokera. Obserwuj moją strone <a href="www.patryk-nizio.pl" >www.patryk-nizio.pl</a></p>
+                    <p>Kod aplikacji dostępny jest na <a href="https://github.com/Dyzio18/cards_basic/">www.github.com/Dyzio18/cards_basic</a></p>
+                    <p>Sama logika gry nie ma na celu rozgrywki lecz pokazaniu funkcjonalności które będą zawarte w przyszłych projektach: dobieranie kart, stos kart, naliczanie punktów, losowanie tali i wiele innych.</p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+@mixin cards_data {
+
+			position: absolute;
+
+			width: 40px;
+			height: 40px;
+
+			background-color:$deep_orange ;
+			color: #fff;
+
+			line-height: 40px;
+
+			border-right: 5px solid $deep_orange-light;
+			border-left: 5px solid $deep_orange-light;
+
+			border-radius: 40px;
+			text-align: center;
+			font-weight: 700;
+}
+
+@mixin basic_animation($time) {
+	-webkit-transition: all $time ease-in-out;
+    -moz-transition: all $time ease-in; 
+    -o-transition: all $time ease-in;
+    -ms-transition: all $time ease-in; 
+    transition: all $time ease-in; 
+}
+
+@mixin noselect{
+	webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.drop_box{
+	margin-top: 50px;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+
+
+
+	.cards_box {
+		display: flex;
+		position: relative;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		width: 40%;
+		height: 100%;
+
+		border: 4px dashed $deep_orange-light;
+		margin: 10px;
+		padding: 20px;
+
+
+		.cards_info{
+			@include cards_data;
+			top: -20px;
+			left: 10px;
+		}
+
+		.cards_operation{
+			@include cards_data;
+			font-size: 40px;
+		    cursor:cell;
+			top: -20px;
+			right: 70px;	
+			@include basic_animation(1s);
+			@include noselect;
+		}
+		.cards_operation:nth-child(2){
+			top: -20px;
+			right: 10px;			
+		}
+
+		.cards_operation:hover{
+			background-color: $deep_orange-light;
+			@include basic_animation(1s);
+   		}
+   		.cards_operation:active{
+			background-color: $red;
+			@include basic_animation(0.2s);
+   		}
+	}
+}
+
+@media (max-width: $sm-device)
+{
+.drop_box{
+
+	.cards_box {
+		width: 100%;
+
+
+		.cards_info{
+
+		}
+	}
+}
+}

@@ -1,0 +1,44 @@
+.animate_bg {
+    animation-name: animate_bg;
+	animation-duration: 0.3s;
+    animation-iteration-count: 3;
+}
+@keyframes animate_bg {
+
+    0%   {background-color: #f06292;}
+    25%  {background-color: #c2185b;}
+    50%  {background-color: #ce93d8;}
+    100% {background-color: #c6ff00;}
+}
+	
+
+
+
+//Explosion
+// explosion container
+.explosion {
+  position: absolute; // required if positioned on click else 'relative'
+  width: 600px;
+  height: 600px;
+  pointer-events: none; // make it clickable trhough
+  // particle styling
+  .particle {
+    position: absolute; // required  
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: pop 1s reverse forwards; // required
+  }
+}
+
+// animation for particle fly away from the cursor
+@keyframes pop {
+  from {
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+}
