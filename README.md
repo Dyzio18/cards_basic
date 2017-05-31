@@ -13,4 +13,4 @@ TODO:
 - More animations
 - Ranking
 
-- (!) Mobile users solution (Users with touch screen can't use  & Drop HTML5 API) 
+- (!) Mobile users solution (Users with touch screen can't use native Drag & Drop HTML5 API) 
